@@ -1,0 +1,148 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <script src="https://d3js.org/queue.v1.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <style type="text/css">
+            /* CSS pour les div HTML */
+            #map {
+              width: 80%;
+              float:right;
+            }
+            #legende{
+                float: left;
+                width: 20%;
+            }
+            #ligne{
+                display: inline-block;
+
+            }
+            #sliderContainer{
+                float: left;
+                width: 25%;
+                text-align: center;
+                height: 155px;
+                margin-top: 45px;
+
+            }
+            /* CSS pour les deux tooltip */
+            div.tooltip {
+                position: absolute;
+                text-align: center;
+                min-width:80px;
+                display: inline-block;
+                /*height: 12px;*/
+                padding: 1%;
+                font: 12px sans-serif;
+                background: #3B2415;
+                color: #c1d3b8;
+                border: 0px;
+                pointer-events: none;
+            }
+            div.tooltip2 {
+                position: absolute;
+                text-align: center;
+                min-width:80px;
+                display: inline-block;
+                /*height: 12px;*/
+                padding: 0.5%;
+                font: 12px sans-serif;
+                background: #3B2415;
+                color: #c1d3b8;
+                border: 0px;
+                pointer-events: none;
+            }
+            /* CSS pour classes javascript */
+            .line {
+                fill: none;
+                stroke: #ffab00;
+                stroke-width: 3;
+            }
+            /* CSS pour le slider */
+            .slider {
+              -webkit-appearance: none;
+              width: 100%;
+              height: 15px;
+              border-radius: 5px;  
+              background: #d3d3d3;
+              outline: none;
+              opacity: 0.7;
+              -webkit-transition: .2s;
+              transition: opacity .2s;
+            }
+
+            .slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%; 
+              background: #000000;
+              cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              background: #000000;
+              cursor: pointer;
+
+            }
+
+            .titre{
+                margin-left: 50px;
+                margin-top: 20px;
+                display: inline-block;
+            }
+
+            .legendG{
+
+                font: 16px sans-serif;
+                font-weight: 300;
+                text-align: right;
+
+                 
+            }
+            .tick{
+                font: 14px sans-serif;
+                font-weight: 300;
+
+            }
+            /* CSS span affichant l'année sélectionnée */
+            #range{
+                font: 14px sans-serif;
+                font-weight: 300;
+
+            }
+
+            } /* FIN CSS */
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id="legende"></div>
+
+        <div id="map"></div>
+
+        <div id="sliderContainer">
+            <input id="timeslide" class="slider" type="range" min="2000" max="2017" value="2000" step="1" style="width: 70%" ><br>
+            <span id="range">2000</span>
+        </div>
+
+        <div id="ligne"></div>        
+
+    </body>
+</html>
+<script src="exportarmes.js">
+
+
+
+</script>
